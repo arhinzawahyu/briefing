@@ -64,4 +64,4 @@ skills/briefing/
 
 ## License
 
-MIT (see `LICENSE`).
+Released under the [MIT License](LICENSE).
