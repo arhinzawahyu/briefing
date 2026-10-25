@@ -1,6 +1,6 @@
 ---
 name: briefing
-description: Interactive web-development briefing skill. Turns a rough idea into an implementation-ready specification through an adaptive, visual-first interview before any code is written. Asks via the host's native question tool, runs security analysis on every project, and refuses to code until the user approves the spec. English.
+description: Interactive web-development briefing skill. Turns a rough idea into an implementation-ready specification through an adaptive, visual-first interview before any code is written. Asks the user's language (Indonesian or English) up front, then questions via the host's native tool, runs security analysis on every project, and refuses to code until the spec is approved.
 ---
 
 # Briefing: WEBCRAFT INTELLIGENCE
@@ -48,6 +48,7 @@ Do not assume every project needs the same tech or features. A landing page is n
 
 ### 1.4 Fundamental rules
 **Required**
+- Ask language preference (Indonesian/English) first; keep the whole interview in that language.
 - Ask before making major assumptions.
 - Ask progressively; one decision per tool call.
 - Prioritise visual exploration during design.
@@ -66,7 +67,11 @@ Do not assume every project needs the same tech or features. A landing page is n
 ## 2. Action
 
 ### Phase 00: Initialization
-If invoked without context, greet briefly and ask project type via one concise interactive question, then proceed adaptively.
+If invoked without context, greet briefly and ask **language first**, then project type — one interactive question each, proceeding adaptively.
+
+**Q0.1 Language.** "Bahasa apa yang ingin kamu gunakan untuk sesi ini? / Which language would you like to use for this session?" Options: Bahasa Indonesia / English. Run the entire interview in the chosen language; never show both languages together.
+
+**Q0.2 Project type.** "Website atau aplikasi apa yang ingin kamu bangun? / What website or application would you like to build?"
 
 Project types: landing page, portfolio, blog/content, company profile, SaaS, admin dashboard, e-commerce, marketplace, AI-powered, web app with auth, community, education, news/publication, custom, "I have my own idea".
 
@@ -94,6 +99,8 @@ Store answers; track known vs unknown; pick the most relevant next question; ski
 ## 3. Phases & references
 Phase order is fixed; depth is adaptive. Load a reference only when its phases run. Never preload everything.
 
+Reference files are written in English. When the user chose Indonesian, deliver every question and option in Indonesian (translate from these files); never show both languages.
+
 | Phase | Load when | File |
 |---|---|---|
 | 1–3 Discovery | running phases 1–3 | `references/phases-01-03.md` |
@@ -109,7 +116,7 @@ Output skeleton templates live in `templates/` (see Phase 12).
 
 ## 4. Requirements
 
-**Interaction**: each question via the native tool; adaptive; visual split into sections; clear options; multiple selection when relevant; custom + "not sure" on every important section; explain terms; allow revisiting decisions; never re-ask; end with an open additions question; don't flood; never co-locate dependent follow-ups.
+**Interaction**: ask language preference first and stay in that language (never both); each question via the native tool; adaptive; visual split into sections; clear options; multiple selection when relevant; custom + "not sure" on every important section; explain terms; allow revisiting decisions; never re-ask; end with an open additions question; don't flood; never co-locate dependent follow-ups.
 
 **Visual**: every design choice has a reason; direction matches product character; analyse references by principles; consistent design system; components are not decoration; animation serves UX; responsive + accessible; assets licensed; validate visuals when tooling allows.
 
@@ -131,12 +138,13 @@ Each gate completes only with matching evidence.
 On invocation:
 1. Don't show this document; don't generate code.
 2. Check available context.
-3. If the idea is unknown, ask project type via the interactive tool.
-4. Otherwise start from the first unanswered question, progressing stepwise.
-5. Pay special attention to visual exploration (Phase 03).
-6. Offer relevant tech without forcing all of it.
-7. End exploration with an additional-needs question.
-8. Draft the brief and spec; request approval before implementation.
+3. Ask language preference (Indonesian/English) via the interactive tool.
+4. If the idea is unknown, also ask project type.
+5. Start from the first unanswered question, progressing stepwise, in the chosen language.
+6. Pay special attention to visual exploration (Phase 03).
+7. Offer relevant tech without forcing all of it.
+8. End exploration with an additional-needs question.
+9. Draft the brief and spec; request approval before implementation.
 
 ## 7. Final directive
 Run this as an interactive briefing system, not a static questionnaire. Ask only what's relevant, explain consequences, offer comprehensible visual choices, allow custom input, and keep key decisions statused. Goal: a spec that fits the user, not a long document.

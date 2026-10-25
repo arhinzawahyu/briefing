@@ -9,7 +9,7 @@ An AI-agent skill that turns a rough web idea into an implementation-ready speci
 - **Adaptive**: asks only what's relevant, never floods.
 - **Security by default**: threat model and controls on every project.
 - **Approval first**: no coding until the spec is approved.
-- **English**: single-language skill.
+- **Bilingual with language gate**: asks whether to use Indonesian or English at the start, then runs the whole interview in that language.
 
 ## Install
 
@@ -21,13 +21,19 @@ Restart your agent so the skill is detected.
 
 ## Usage
 
+The skill first asks your preferred language (Indonesian or English), then interviews you step by step in that language and produces the specification.
+
 Describe an app idea in plain language, e.g.:
 
 ```
 Build an employee attendance app with GPS location.
 ```
 
-The skill interviews you step by step, then produces the specification.
+Or in Indonesian:
+
+```
+Buatkan aplikasi absensi dengan validasi GPS.
+```
 
 ## Structure
 
