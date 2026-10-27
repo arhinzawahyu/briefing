@@ -43,7 +43,7 @@ After approval:
 Follow the approved spec. If conflicts or new needs arise, don't silently change major architecture; raise it with the user.
 
 ## Phase 15: Post-Implementation Evaluation
-Check: functional correctness, visual consistency, responsive layout, keyboard navigation, accessibility, animation behavior, reduced motion, performance, API behavior, data integrity, auth, authorization, security findings, error handling, build results, test results, documentation.
+Check: functional correctness, signature element present and dominant, visual consistency, responsive layout, keyboard navigation, accessibility, animation behavior, reduced motion, performance, API behavior, data integrity, auth, authorization, security findings, error handling, build results, test results, documentation.
 
 Use only real evidence. If untested, write `NOT TESTED`. Distinguish planned / attempted / verified.
 

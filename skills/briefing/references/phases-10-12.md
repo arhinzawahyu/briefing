@@ -22,9 +22,9 @@ After this, don't code; proceed to final review.
 
 ## Phase 11: Final Brief Summary
 Summarize the specification:
-- **A. Project Overview**: name, type, objective, audience, main problem, success criteria.
+- **A. Project Overview**: name, type, objective, audience, main problem, success criteria, non-goals.
 - **B. Product Scope**: core/additional/excluded features, roles, journeys.
-- **C. Visual Direction**: art direction, brand personality, layout, hero, palette, typography, components, navigation, animation intensity/libraries, scroll, responsive, accessibility, assets, constraints, custom.
+- **C. Visual Direction**: art direction, brand personality, signature element, layout, hero, palette, typography, components, navigation, animation intensity/libraries, scroll, responsive, accessibility, assets, constraints, custom.
 - **D. Technical Architecture**: frontend, styling, component library, animation libs, backend, database, API, auth, file storage, deployment.
 - **E. Security**: sensitive data, threat model, controls, audit plan, privacy, residual risks.
 - **F. Engineering**: structure, docs, testing, performance, SEO, accessibility, deployment, monitoring.

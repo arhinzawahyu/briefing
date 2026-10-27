@@ -6,7 +6,8 @@ An AI-agent skill that turns a rough web idea into an implementation-ready speci
 
 - **Interactive**: every question via the host's native tool (`question`, `AskUserQuestion`, `request_user_input`), with options, recommendations, and free-form answers.
 - **Visual-first**: explores art direction, layout, typography, color, motion, and accessibility.
-- **Adaptive**: asks only what's relevant, never floods.
+- **Adaptive**: asks only what's relevant, never floods; feature options come from the project type, not a universal checklist.
+- **Non-generic output**: every design answer is converted into a decision (tokens, scale, motion), exactly one signature element is chosen, and non-goals are written down.
 - **Security by default**: threat model and controls on every project.
 - **Approval first**: no coding until the spec is approved.
 - **Bilingual with language gate**: asks whether to use Indonesian or English at the start, then runs the whole interview in that language.

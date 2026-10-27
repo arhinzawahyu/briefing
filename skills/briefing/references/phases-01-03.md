@@ -15,6 +15,10 @@ Purpose: understand the project before discussing design and tech.
 
 **Q1.5 User goal.** "When they open the site, what main action do you expect?" Examples: understand product / sign up / create project / upload documents / search / buy / read articles / contact / use tools / manage data.
 
+**Q1.5b Success metric.** "How will you know this succeeded?" Options: more sign-ups / more sales / more contacts / traffic / time saved / brand awareness / not sure (recommend one). Record as a measurable target where possible; skip if the user doesn't care.
+
+**Q1.5c Non-goals.** "What is explicitly out of scope?" Options: nothing, everything in the list / no accounts / no payments / no admin panel / no content editing / not sure (propose a non-goal list for confirmation). An unstated non-goal becomes scope creep later; record it in the brief even when empty.
+
 **Q1.6 References.** "Do you have reference sites?" Options: URL / screenshot / several with different characters / none / help me find. Analyze only genuinely accessible info.
 
 **Q1.7 Additional info.** "Any other info (idea, goal, users, constraints) not covered?" Optional free field.
@@ -22,7 +26,21 @@ Purpose: understand the project before discussing design and tech.
 ## Phase 02: Product & Feature Discovery
 Purpose: determine features truly needed.
 
-**Q2.1 Core features.** "Which features do you want?" Show per project type. Example (web app): login & registration / dashboard / CRUD / search & filter / upload / export / notifications / API integrations / AI features / admin panel / payments / other. Multiple select. Include "I don't know, help me".
+**Q2.1 Core features.** "Which features do you want?" Show options derived from the project type (table below), not a universal checklist. Multiple select. Include "I don't know, help me" and free text.
+
+| Project type | Typical required sections | Usually needed | Usually NOT needed |
+|---|---|---|---|
+| Landing page | hero, value props, proof, CTA, footer | analytics, contact form | auth, database |
+| Portfolio | case studies, about, contact | CMS, image pipeline | payments, auth |
+| Blog / publication | index, post, tags, feed | CMS, SEO schema | app dashboard |
+| Company profile | services, about, testimonials, contact | contact form, local SEO | auth |
+| SaaS | pricing, features, signup, login, onboarding | auth, database, billing | heavy scroll animation |
+| Admin dashboard | auth, tables, forms, roles | database, audit log | marketing sections |
+| E-commerce | catalog, product page, cart, checkout | payments, auth, stock | long-form blog |
+| Marketplace | listings, search, messaging, roles | auth, payments, moderation | single-tenant admin |
+| AI app | input, streaming output, history | provider API, rate limit, cost cap | marketing bloat |
+
+Treat the table as defaults to confirm, not a fixed template. Deviations are allowed when the user gives a reason; record the reason.
 
 **Q2.2 User roles.** "Are there distinct user types or access levels?" Options: all public / some require login / users & admin / several roles with different permissions / not sure.
 
@@ -35,12 +53,16 @@ Purpose: determine features truly needed.
 ## Phase 03: Visual Discovery
 Important: design is not just picking colors & fonts. Split this phase into sections; never ask all visual questions at once.
 
+Anti-generic rule: an adjective is not a design decision. Whenever the user answers with a mood word ("premium", "modern", "clean"), ask what screen or site made them feel that, then convert the answer into decisions: type scale, spacing density, radius, motion duration, imagery treatment. An answer that cannot be converted stays `UNRESOLVED`, not silently filled with a default.
+
 ### Section A: Art direction
 **Q3.1 Visual character.** "What visual character?" Options: Minimalist Premium / Editorial / Modern SaaS / Cinematic / Experimental (Awwwards-inspired) / Brutalist / Futuristic / Playful / Corporate Professional / Custom Direction. Note these are not final templates.
 
 **Q3.2 Impression.** "What impression must visitors feel?" (max 3): Professional & trustworthy / Elegant & premium / Bold & experimental / Modern & futuristic / Warm & friendly / Minimal & calm / Cinematic & immersive / Creative & expressive / Other. Explain trade-offs if conflicting.
 
-**Q3.3 Setting direction.** Options: reference site / pick from several visual refs / moodboard / AI recommends / combine refs / describe yourself. Use image browsing if available; never claim references you didn't access.
+**Q3.3 Setting direction.** Options: reference site / pick from several visual refs / moodboard / AI recommends / combine refs / describe yourself. Use image browsing if available; never claim references you didn't access. When a reference is given, record what specifically is being borrowed (layout, type, color, motion, tone) and what is rejected — not just the URL.
+
+**Q3.3b Signature element.** "What should a visitor remember after 10 seconds?" Options: the headline / the product visual / one interaction / the typography / the imagery / the data shown / not sure (recommend, explaining why). Exactly one signature element; if everything is emphasized, nothing is. Record it; it drives the design and is checked in Phase 15.
 
 ### Section B: Layout
 **Q3.4 Layout character.** "What composition?" Options: Clean Grid / Editorial Asymmetric / Bento / Full-screen Immersive / Split / Dashboard Dense / Scrollytelling / Hybrid / Custom. One layout needn't fit every page.
@@ -106,4 +128,4 @@ Don't end the visual phase after animation/responsiveness. Ask: "Any remaining v
 
 If "I'll write": show a guided free field; analyze, group, flag conflicts, explain consequences, clarify only if needed, and update the brief. Never ignore free-form answers.
 
-**Visual summary.** After all sections, present a summary: art direction, brand personality, layout, hero, palette, typography, component style, navigation, animation intensity/libraries, scroll, responsive strategy, accessibility, asset strategy, constraints, additions. Mark each decision `CONFIRMED` / `PROPOSED` / `NEEDS CONFIRMATION`. Ask "Is this visual direction right?" Never treat answered questions as approval.
+**Visual summary.** After all sections, present a summary: art direction, brand personality, impression, signature element, layout, hero, palette, typography, component style, navigation, animation intensity/libraries, scroll, responsive strategy, accessibility, asset strategy, constraints, additions. Mark each decision `CONFIRMED` / `PROPOSED` / `NEEDS CONFIRMATION`. Ask "Is this visual direction right?" Never treat answered questions as approval.

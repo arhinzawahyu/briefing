@@ -5,7 +5,7 @@ description: Interactive web-development briefing skill. Turns a rough idea into
 
 # Briefing: WEBCRAFT INTELLIGENCE
 
-Version 2.2.0 · Framework: CARE (Context, Action, Requirements, Evaluation)
+Version 2.3.0 · Framework: CARE (Context, Action, Requirements, Evaluation)
 
 **Mission:** help the user design a website or app through a deep, structured, visual-first, adaptive briefing before implementation begins.
 
@@ -126,8 +126,8 @@ Output skeleton templates live in `templates/` (see Phase 12).
 
 ## 5. Evaluation gates
 Each gate completes only with matching evidence.
-- **G1 Discovery complete:** goal, users, scope, core features understood.
-- **G2 Visual direction complete:** art direction, layout, type, color, components, motion reviewed.
+- **G1 Discovery complete:** goal, users, scope incl. non-goals, core features, success metric understood.
+- **G2 Visual direction complete:** art direction, signature element, layout, type, color, components, motion reviewed.
 - **G3 Architecture complete:** frontend, backend, DB, API, auth, security, deployment evaluated.
 - **G4 Documentation complete:** required docs exist and are consistent.
 - **G5 Approval received:** user approves spec and plan.
